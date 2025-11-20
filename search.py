@@ -49,6 +49,11 @@ def exppoisk(m1,m2):
     for x in small:
         if exp_search(big,x): return True
     return False
-def bin_perebor(m1,m2):
-    if len(m1)<1: return False
-    return binpoisk(m2,m1[len(m1)//2]) or bin_perebor(m1[0:len(m1)//2],m2) or bin_perebor(m1[len(m1)//2+1:len(m1)],m2)
+def bin_perebor(m1, m2, l, r):
+    if l > r: return False
+    mid = (l + r) // 2
+    if binpoisk(m2, m1[mid]):
+        return True
+    return bin_perebor(m1, m2, l, mid-1) or \
+           bin_perebor(m1, m2, mid+1, r)
+
