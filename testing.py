@@ -18,7 +18,7 @@ for l in range(100,5000,10):
     time_1=time.time()
     sc.two_pointers(m1,m2)
     time_2=time.time()
-    sc.bin_perebor(m1,m2)
+    sc.bin_perebor(m1,m2,0,l-1)
     time_3=time.time()
     sc.exppoisk(m1,m2)
     time_4=time.time()
