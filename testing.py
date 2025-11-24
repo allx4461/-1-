@@ -9,8 +9,8 @@ res2=[]
 res3=[]
 res4=[]
 time_binrazdel=[]
-r=1
-k=5
+r=1000
+k=10
 for l in range(10,1000,1):
     [m1,m2]=gn.generate_fortest(l,r)
     timeline.append(l)
@@ -24,7 +24,7 @@ for l in range(10,1000,1):
     for i in range(k):sc.binsmallermassive(m1,m2)
     time_5=time.time()
 
-    res1.append((time_2-time_1))
+    res1.append((time_2 - time_1))
     res2.append((time_3 - time_2))
     res3.append((time_4 - time_3))
     res4.append((time_5 - time_4))
@@ -45,3 +45,4 @@ ax.plot(timeline, res4, label="bin_smaller")
 ax.legend()
 
 plt.show()
+
