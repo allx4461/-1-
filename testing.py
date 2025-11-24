@@ -34,7 +34,6 @@ fig, ax = plt.subplots()
 plt.title('четные и нечетные (размер отличается в 1000 раз)')
 plt.xlabel('size')
 plt.ylabel('time')
-plt.ylim([10**-5, 10**-2])
 plt.xscale('log')
 plt.yscale('log')
 plt.tight_layout()
@@ -45,4 +44,5 @@ ax.plot(timeline, res4, label="bin_smaller")
 ax.legend()
 
 plt.show()
+
 
