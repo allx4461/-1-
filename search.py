@@ -1,4 +1,4 @@
-import random
+
 
 def two_pointers(m1,m2):
     i1,i2=0,0
@@ -26,7 +26,7 @@ def binsmallermassive(m1,m2):
             if binpoisk(m1,m2[i]): return True
         return False
 def exp_search(arr, x):
-    if not arr: return False
+    if len(arr)==0: return False
     if arr[0] == x: return True
     i = 1
     n = len(arr)
@@ -49,6 +49,10 @@ def exppoisk(m1,m2):
     for x in small:
         if exp_search(big,x): return True
     return False
+def start_bin_perebor(m1,m2):
+    if len(m1) <= len(m2): small, big = m1, m2
+    else: small, big = m2, m1
+    return bin_perebor(small,big,0,len(small)-1)
 def bin_perebor(m1, m2, l, r):
     if l > r: return False
     mid = (l + r) // 2
@@ -56,4 +60,3 @@ def bin_perebor(m1, m2, l, r):
         return True
     return bin_perebor(m1, m2, l, mid-1) or \
            bin_perebor(m1, m2, mid+1, r)
-
