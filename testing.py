@@ -17,7 +17,7 @@ for l in range(10,1000,1):
     time_1=time.time()
     for i in range(k):sc.two_pointers(m1,m2)
     time_2=time.time()
-    for i in range(k):sc.start_bin_perebor(m1,m2)
+    for i in range(k):sc.start_binsplit(m1,m2)
     time_3=time.time()
     for i in range(k):sc.exppoisk(m1,m2)
     time_4=time.time()
@@ -44,5 +44,6 @@ ax.plot(timeline, res4, label="bin_smaller")
 ax.legend()
 
 plt.show()
+
 
 
