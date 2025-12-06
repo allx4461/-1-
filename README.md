@@ -7,19 +7,19 @@
 Вот как зависит эффективностть разных алгоритмов от того, в сколько раз отличаются размеры массивов (обратим внимание на алгоритм "два указателя"!):
 
 на массивах равной длины алгоритм "два указателя" дает наилучшие показатели, а другие три примерно одинаковы (но экспоненциальный работает медленнее всего)
-
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/ae57e63e-76e5-4452-b701-b5a5175dc24b" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/55e8d167-4999-4ba9-a994-ad2c02542a3b" />
 
 на отличающихся в 10 раз массивах он приближается к другим алгоритмам(экспоненциальный все еще самый медленный)(тут ошибка в подписи, размер отличается в 10 раз)
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/88157066-690c-4e9c-9cc5-9e6cb890aa4d" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/3af5bb2a-cace-468e-abd3-ce3cee46d3de" />
 
 на отличающихся в 100 раз массивах он уже дает худшие показатели, а бинарный поиск дает наилучший результат
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/7948a140-03c7-4161-b764-67517280fafc" />
 
-<img width="608" height="480" alt="image" src="https://github.com/user-attachments/assets/8f082cb5-a61f-42e6-bc69-0ee633d30f92" />
 
 и при отличии в 1000 раз разрыв увеличивается (хотя на маленьких данных он близок к другим алгоритмам), бинарный поиск сохраняет позицию, работая быстрее всего
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/db96790f-a55b-4d1e-b67b-74d151ee258b" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/25da8359-1434-403a-b5f7-3968ae85bab1" />
+
 
 Итог: алгоритм "два указателя" дает хороший результат только при небольшой разнице в размерах массивов, а "бинарный поиск" работает бысстрее двух оставшихся алгоритмов независимо от размеров массива. 
